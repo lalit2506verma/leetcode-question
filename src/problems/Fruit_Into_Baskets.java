@@ -2,7 +2,7 @@ package problems;
 
 import java.util.HashMap;
 
-public interface Fruit_Into_Baskets {
+public class Fruit_Into_Baskets {
     public static void main(String[] args) {
         int[] arr = {1,2,3,2,2,3,3,2,1,1,2,3,3,2,2,1,1,3};
         System.out.println(totalFruit(arr));
