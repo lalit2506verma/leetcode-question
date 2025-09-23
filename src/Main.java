@@ -1,4 +1,5 @@
 import problems.ImplementationClasses.FoodRatings;
+import problems.ImplementationClasses.Spreadsheet;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -6,18 +7,15 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
 
-        String[] food = {"kimchi","miso","sushi","moussaka","ramen","bulgogi"};
-        String[] cuisine = {"korean","japanese","japanese","greek","japanese","korean"};
-        int[] rating = {9,12,8,15,14,7};
+        Spreadsheet st = new Spreadsheet(3);
 
-        FoodRatings foodRatings = new FoodRatings(food, cuisine, rating);
-
-        System.out.println(foodRatings.highestRated("korean"));
-        System.out.println(foodRatings.highestRated("japanese"));
-        foodRatings.changeRating("sushi", 16);
-        System.out.println(foodRatings.highestRated("japanese"));
-        foodRatings.changeRating("ramen",16);
-        System.out.println(foodRatings.highestRated("japanese"));
+        System.out.println(st.getValue("=5+7"));
+        st.setCell("A1", 10);
+        System.out.println(st.getValue("=A1+6"));
+        st.setCell("B2", 15);
+        System.out.println(st.getValue("=A1+B2"));
+        st.resetCell("A1");
+        System.out.println(st.getValue("=A1+B2"));
 
     }
 }
